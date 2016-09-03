@@ -19,7 +19,7 @@ if ! [ $5 ]; then
 fi
 size=72
 
-echo $1 | convert -background white -fill black -font Helvetica -pointsize $size -border 2 -bordercolor white -transparent white label:@- $textpdf
+convert -background white -fill black -font Helvetica -pointsize $size -border 2 -bordercolor white -transparent white label:"$1" $textpdf
 if ! [ $6 ]; then
 	pdfjam --paper 'a4paper' --scale $scale --offset "$coords" $textpdf
 else
